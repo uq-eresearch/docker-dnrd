@@ -7,4 +7,4 @@ This image is based on busybox+glibc with a statically-compiled DNRD binary.
 
 To run:
 
-    docker run -d dnrd -s 8.8.8.8
+    docker run -d -p 53:53 uqeresearch/dnrd -s 8.8.8.8
