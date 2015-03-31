@@ -12,7 +12,7 @@ dnrd: build/dnrd-$(DNRD_VERSION).tar.gz
 		-v `pwd`/build/:/build/ \
 		-w /build/dnrd-$(DNRD_VERSION) \
 		--user `id -u` \
-		gcc:4.9 /bin/bash -c './configure CFLAGS="-static" && make'
+		gcc:4.9 /bin/bash -c './configure --enable-tcp CFLAGS="-static" && make'
 	cp build/dnrd-$(DNRD_VERSION)/src/dnrd ./dnrd
 
 build/dnrd-$(DNRD_VERSION).tar.gz:
